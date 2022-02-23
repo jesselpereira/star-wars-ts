@@ -1,0 +1,127 @@
+.Person-body {
+  background-color: #282c34;
+  min-height: 91.48vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  position: static;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Person {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: auto;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Person-card {
+  min-width: 300px;
+  max-height: 360px;
+  padding: 1.1rem;
+  background-color: whitesmoke;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 15px;
+  float: left;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+.Card-avatar svg {
+  position: relative;
+  top: -80px;
+  width: 110px !important;
+  height: 110px !important;
+}
+
+.Card-info {
+  position: relative;
+  top: -70px;
+  height: fit-content;
+  color: grey;
+}
+
+.Head p, h2 {
+  text-align: center;
+}
+
+.Body p {
+  text-align: left;
+}
+
+.Person-actions {
+  min-width: 300px;
+  min-height: 300px;
+  padding: 1.1rem;
+  float: right;
+  margin-top: 20px;
+  align-self: end;
+}
+
+.lg-button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  color: #000;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.lg-button:disabled,
+.lg-button[disabled]{
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  color: #000;
+  cursor: not-allowed;
+  background-color: #c3c3c3;
+  border-color: #c3c3c3;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.Person {
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}

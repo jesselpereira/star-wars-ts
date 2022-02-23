@@ -1,0 +1,29 @@
+.Loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Loader:empty {
+  position: sticky;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 0.1em solid rgba(56, 56, 56, 0.2);
+  border-left: 0.1em solid #dadada;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
