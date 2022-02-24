@@ -68,6 +68,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
  - [React JS](https://reactjs.org/)
  - [TypeScript](https://www.typescriptlang.org/)
+ - [swapi](https://swapi.dev/)
  - [avataaars](https://www.npmjs.com/package/avataaars)
  - [axios](https://www.npmjs.com/package/axios)
  - [react-query](https://www.npmjs.com/package/react-query)

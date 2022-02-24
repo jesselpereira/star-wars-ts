@@ -165,9 +165,11 @@ function handleGender(gender: string) {
 }
 
 function FetchWorld(world: WorldProps) {
-  const { data, error } = useQuery(`homeworld-${world.id}`, () =>
+  const { data, error, isLoading } = useQuery(`homeworld-${world.id}`, () =>
     fetch(`https://swapi.dev/api/planets/${world.id}`),
   );
+
+  if (isLoading) return 'Carregando...';
 
   if (error) return 'Error';
 
