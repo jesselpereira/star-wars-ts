@@ -88,7 +88,7 @@ function FetchPerson({ id }: PersonProps) {
                   Gênero 🧍{' - '}
                   {`${
                     data.gender !== 'unknown'
-                      ? `${tractGender(data.gender)}`
+                      ? `${handleGender(data.gender)}`
                       : 'Desconhecido'
                   }`}
                 </p>
@@ -156,12 +156,12 @@ function handleSkinColor(skinColor: string) {
   return skinColorDictionary?.[skinColor] || 'Tanned';
 }
 
-function tractGender(gender: string) {
-  const dicionario = {
+function handleGender(gender: string) {
+  const genderDictionary = {
     male: 'Masculino',
     female: 'Feminino',
   } as Record<string, string>;
-  return dicionario?.[gender] || 'Não especificado';
+  return genderDictionary?.[gender] || 'Não especificado';
 }
 
 function FetchWorld(world: WorldProps) {

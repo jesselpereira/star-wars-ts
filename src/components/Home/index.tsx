@@ -1,13 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import Error from '../Error';
 import Loader from '../Loader';
 import Table from '../Table';
 import axios from 'axios';
 import { useQuery, useQueryClient } from 'react-query';
-
-export default function Home() {
-  return <Persons />;
-}
 
 async function fetchPersons(page = 1) {
   const { data } = await axios.get(
@@ -16,7 +12,7 @@ async function fetchPersons(page = 1) {
   return data;
 }
 
-function Persons() {
+function Home() {
   const queryClient = useQueryClient();
   const [page, setPage] = React.useState(1);
 
@@ -34,38 +30,50 @@ function Persons() {
     }
   }, [data, page, queryClient]);
 
-  return status === 'loading' ? (
+  return status === 'loading' || error ? (
     <Loader />
-  ) : status === 'error' ? (
-    <Error error={`${error}`} />
   ) : (
-    <>
-      <div className="Table">
-        <div className="Table-body">
-          <Table data={data} />
-        </div>
-        <div className="Table-footer">
-          <button
-            className="lg-button"
-            onClick={() => setPage((old) => Math.max(old - 1, 1))}
-            disabled={page === 1}
-          >
-            Página anterior
-          </button>{' '}
-          <button
-            className="lg-button"
-            onClick={() => {
-              setPage((old) => (data?.next ? old + 1 : old));
-            }}
-            disabled={isPreviousData || !data?.next}
-          >
-            Próxima página
-          </button>
-          <br />
-          <br />
-          <h4>Página {page}</h4>
-        </div>
-      </div>
-    </>
+    <TableComponent
+      data={data}
+      page={page}
+      setPage={setPage}
+      isPreviousData={isPreviousData}
+    />
   );
 }
+
+const TableComponent = (props: {
+  data: any;
+  page: number;
+  setPage: any;
+  isPreviousData: boolean;
+}) => (
+  <div className="Table">
+    <div className="Table-body">
+      <Table data={props.data} />
+    </div>
+    <div className="Table-footer">
+      <button
+        className="lg-button"
+        onClick={() => props.setPage((old: number) => Math.max(old - 1, 1))}
+        disabled={props.page === 1}
+      >
+        Página anterior
+      </button>{' '}
+      <button
+        className="lg-button"
+        onClick={() => {
+          props.setPage((old: number) => (props.data?.next ? old + 1 : old));
+        }}
+        disabled={props.isPreviousData || !props.data?.next}
+      >
+        Próxima página
+      </button>
+      <br />
+      <br />
+      <h4>Página {props.page}</h4>
+    </div>
+  </div>
+);
+
+export default Home;

@@ -3,7 +3,7 @@ import './styles.scss';
 function Container(props: { className: string }) {
   return (
     <div className={props.className}>
-      <div className="rnavbar-brand">
+      <div className="navbar-brand">
         <img
           alt="Star Wars - API Consumer"
           src="../../../logo128.png"
@@ -13,8 +13,8 @@ function Container(props: { className: string }) {
         />{' '}
         Star Wars - API Consumer
       </div>
-      <div className="rjustify-content-end rnavbar-collapse rcollapse">
-        <div className="rnavbar-text">
+      <div className="justify-content-end navbar-collapse collapse">
+        <div className="navbar-text">
           See on{' '}
           <a
             href="https://github.com/jesselpereira/star-wars-ts"
@@ -28,10 +28,10 @@ function Container(props: { className: string }) {
   );
 }
 
-const NewHeader = () => (
-  <div className="rnavbar rnavbar-expand rnavbar-dark rbg-dark">
-    <Container className="rcontainer" />
+export const Header = () => (
+  <div className="navbar navbar-expand navbar-dark rbg-dark">
+    <Container className="container" />
   </div>
 );
 
-export default NewHeader;
+export default Header;
