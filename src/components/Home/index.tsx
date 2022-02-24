@@ -69,9 +69,6 @@ const TableComponent = (props: {
       >
         Próxima página
       </button>
-      <br />
-      <br />
-      <h4>Página {props.page}</h4>
     </div>
   </div>
 );

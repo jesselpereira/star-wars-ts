@@ -1,8 +1,34 @@
-# Star Wars - API Consumer
+# Star Wars 🛸 - API Consumer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web-crawler application that requests information from the Star Wars developers API, making it possible to search the data by page and using cache to avoid duplicate searches. This is a project that was developed through a challenge.
+## Running locally 🏃
 
-## Available Scripts
+Clone the project
+
+```bash
+  git clone https://github.com/jesselpereira/star-wars-ts
+```
+
+Enter the project directory
+
+```bash
+  cd star-wars-ts
+```
+
+Install the dependencies
+
+```bash
+  npm i
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Available Scripts 🤖
 
 In the project directory, you can run:
 
@@ -38,9 +64,11 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## References
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ - [React JS](https://reactjs.org/)
+ - [TypeScript](https://www.typescriptlang.org/)
+ - [avataaars](https://www.npmjs.com/package/avataaars)
+ - [axios](https://www.npmjs.com/package/axios)
+ - [react-query](https://www.npmjs.com/package/react-query)
+ - [styled-components](https://www.npmjs.com/package/styled-components)
